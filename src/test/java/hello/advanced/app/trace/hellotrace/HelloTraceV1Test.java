@@ -17,6 +17,5 @@ class HelloTraceV1Test {
         HelloTraceV1 trace = new HelloTraceV1();
         TraceStatus status = trace.begin("hello");
         trace.exception(status, new IllegalStateException());
-
     }
 }

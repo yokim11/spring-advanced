@@ -26,7 +26,7 @@ public class OrderControllerV1 {
             return "ok " + itemId;
         } catch (Exception e) {
             trace.exception(status, e);
-            throw e; // 예외를 다시 던져중어야 한다
+            throw e; // 예외를 다시 던져 주어야 한다
         }
     }
 }

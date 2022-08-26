@@ -20,14 +20,13 @@ public class OrderControllerV3 {
         TraceStatus status = null;
         String currentClassName = this.getClass().getName() + ".request()";
         try {
-
             status = trace.begin(currentClassName);
             orderService.orderItem(itemId);
             trace.end(status);
             return "ok " + itemId;
         } catch (Exception e) {
             trace.exception(status, e);
-            throw e; // 예외를 다시 던져중어야 한다
+            throw e; // 예외를 다시 던져 주어야 한다
         }
     }
 }
